@@ -15,7 +15,7 @@ const LeftSideNav = () => {
         </h2>
         <div>
           <div>
-            <h2 className="text-2xl font-bold py-4 px-12 rounded-md  bg-[#E7E7E7] mb-4">
+            <h2 className="text-2xl font-bold py-4 px-12 rounded-md bg-[#E7E7E7] mb-4">
               National News
             </h2>
             {

@@ -3,7 +3,7 @@ import Header from './shared/Header';
 import Navbar from './shared/Navbar';
 import LeftSideNav from './shared/LeftSideNav';
 import RightSideNav from './shared/RightSideNav';
-import BrakingNews from './BrakingNews';
+import BrakingNews from '../components/BrakingNews';
 
 const Home = () => {
     return (
