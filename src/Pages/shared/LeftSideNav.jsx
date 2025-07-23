@@ -19,7 +19,7 @@ const LeftSideNav = () => {
               National News
             </h2>
             {
-                categories.map(category => <Category category={category}></Category>)
+                categories.map(category => <Category key={category.id} category={category}></Category>)
             }
           </div>
         </div>

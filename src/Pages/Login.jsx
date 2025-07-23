@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from './shared/Navbar';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../provider/AuthContext';
 
 const Login = () => {
+  const {signInUser} = useContext(AuthContext);
+
+  const handleLogIn = e =>{
+    e.preventDefault()
+    const form = new FormData(e.currentTarget);
+    const email = form.get('email')
+    const password = form.get('password')
+    console.log(email, password)
+
+    signInUser(email, password)
+    .then(result => {
+      console.log(result.user)
+    })
+    .catch(error =>{
+      console.log(error)
+    })
+  }
     return (
       <div>
         <Navbar></Navbar>
@@ -11,7 +29,7 @@ const Login = () => {
             Login your account
           </h2>
           <hr className="my-12" />
-          <form>
+          <form onSubmit={handleLogIn}>
             <div>
               <p className="mb-[15px] font-semibold text-xl">Email address</p>
               <input
